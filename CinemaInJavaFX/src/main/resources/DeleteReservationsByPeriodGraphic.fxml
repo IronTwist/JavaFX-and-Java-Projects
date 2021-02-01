@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+
+<AnchorPane prefHeight="152.0" prefWidth="307.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DeleteReservationsByPeriod">
+   <children>
+      <Label layoutX="29.0" layoutY="21.0" text="Start">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField layoutX="72.0" layoutY="21.0" prefHeight="25.0" prefWidth="57.0" promptText="day" fx:id="txtDayStart" />
+      <TextField layoutX="131.0" layoutY="21.0" prefHeight="25.0" prefWidth="57.0" promptText="month" fx:id="txtMonthStart" />
+      <TextField layoutX="190.0" layoutY="21.0" prefHeight="25.0" prefWidth="93.0" promptText="year" fx:id="txtYearStart"/>
+      <Label layoutX="32.0" layoutY="59.0" text="End">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField layoutX="72.0" layoutY="59.0" prefHeight="25.0" prefWidth="57.0" promptText="day" fx:id="txtDayEnd"/>
+      <TextField layoutX="131.0" layoutY="59.0" prefHeight="25.0" prefWidth="57.0" promptText="month" fx:id="txtMonthEnd"/>
+      <TextField layoutX="190.0" layoutY="59.0" prefHeight="25.0" prefWidth="93.0" promptText="year" fx:id="txtYearEnd"/>
+      <Button layoutX="189.0" layoutY="100.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="93.0" text="Delete" fx:id="btnDelete" onAction="#deleteFromPeriod">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

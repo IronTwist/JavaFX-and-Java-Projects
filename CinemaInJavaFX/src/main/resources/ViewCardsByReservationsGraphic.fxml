@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="305.0" prefWidth="205.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ViewCardsByReservationsGraphic">
+    <TableView fx:id="txtReservationNumberTable" layoutX="19.0" layoutY="59.0" prefHeight="218.0" prefWidth="165.0">
+        <columns>
+            <TableColumn fx:id="colCardNumber" prefWidth="80.66665649414062" text="Card number">
+                <cellValueFactory>
+                    <PropertyValueFactory property="cardNumber" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+        <columns>
+            <TableColumn fx:id="colNumberOfReservation" prefWidth="80.66665649414062" text="Reservations">
+                <cellValueFactory>
+                    <PropertyValueFactory property="numberOfReservations" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+   <Label layoutX="15.0" layoutY="14.0" prefHeight="27.0" prefWidth="172.0" text="Reservations per cards">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </Label>
+</AnchorPane>

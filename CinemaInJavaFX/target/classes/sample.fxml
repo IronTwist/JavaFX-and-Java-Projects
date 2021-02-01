@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="446" prefHeight="446.0" prefWidth="999.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+
+    <top>
+        <MenuBar>
+            <Menu text="File">
+                <items>
+                    <MenuItem onAction="#addMovie" text="Add movie" />
+                </items>
+                <items>
+                    <MenuItem onAction="#deleteMovie" text="Delete movie" />
+                    <SeparatorMenuItem />
+                </items>
+                <items>
+                    <MenuItem onAction="#addReservation" text="Add reservation" />
+                </items>
+                <items>
+                    <MenuItem onAction="#deleteMovieReservation" text="Delete reservation" />
+                    <SeparatorMenuItem />
+                </items>
+                <items>
+                    <MenuItem fx:id="btnExit" onAction="#exit" text="Exit" />
+                </items>
+            </Menu>
+            <Menu text="Edit">
+                <items>
+                    <MenuItem onAction="#handleUndo" text="Undo" />
+                </items>
+                <items>
+                    <MenuItem onAction="#handleRedo" text="Redo" />
+                    <SeparatorMenuItem />
+                </items>
+                <items>
+                    <MenuItem onAction="#handleMovieStatusChange" text="Change movie status" />
+                </items>
+            </Menu>
+            <Menu text="View">
+                <items>
+                    <MenuItem onAction="#handleViewCardsByReservations" text="Cards by number of Reservations" />
+                </items>
+                <items>
+                    <MenuItem onAction="#handleShowMoviesOrderByNrReservations" text="Movies by number of Reservations" />
+                </items>
+            </Menu>
+            <Menu text="Options">
+                <items>
+                    <MenuItem onAction="#handleSearchMovies" text="Search movies" />
+                </items>
+                <items>
+                    <MenuItem onAction="#handleSearchReservation" text="Search reservations" />
+                </items>
+                <items>
+                    <MenuItem onAction="#handleDeleteAllReservationsInAGivenInterval" text="Delete reservations by period" />
+                </items>
+            </Menu>
+            <Menu text="Help">
+                <items>
+                    <MenuItem text="About the author" onAction="#authorDetails" />
+                </items>
+            </Menu>
+        </MenuBar>
+
+    </top>
+
+    <left>
+
+        <VBox alignment="CENTER_RIGHT" maxWidth="452" minWidth="452">
+        <TableView fx:id="tblReservation" editable="true" focusTraversable="false" prefHeight="335.0" prefWidth="443.0">
+            <columns>
+                <TableColumn fx:id="colIdReservation" maxWidth="50" text="Id">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="id" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+            <columns>
+                <TableColumn fx:id="movieId" text="Movie id">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="movieId" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+            <columns>
+                <TableColumn fx:id="clientNumberCardId" minWidth="90" text="Client Card">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="clientNumberCard" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+            <columns>
+                <TableColumn fx:id="DateTimeId" minWidth="220" text="Date / Time">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="dateTime" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+            <VBox.margin>
+               <Insets left="10.0" top="10.0" />
+            </VBox.margin>
+        </TableView>
+        </VBox>
+    </left>
+
+    <center>
+        <HBox>
+            <Label prefHeight="27.0" prefWidth="182.0" rotate="90.0" text="Reservations">
+            <HBox.margin>
+               <Insets left="-60.0" right="-20.0" top="180.0" />
+            </HBox.margin>
+            <font>
+               <Font size="16.0" />
+            </font></Label>
+            <Label prefHeight="23.0" prefWidth="101.0" rotate="-90.0" text="Movies">
+            <HBox.margin>
+               <Insets left="-30.0" right="-20.0" top="150.0" />
+            </HBox.margin>
+            <font>
+               <Font size="16.0" />
+            </font></Label>
+        </HBox>
+    </center>
+
+    <right>
+        <VBox alignment="CENTER_LEFT" maxWidth="465" minWidth="465">
+            <TableView fx:id="tblMovies" editable="true" focusTraversable="false" prefHeight="361.0" prefWidth="476.0">
+                <columns>
+                    <TableColumn fx:id="colIdMovie" maxWidth="30" text="Id">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="id" />
+                        </cellValueFactory>
+                    </TableColumn>
+                </columns>
+                <columns>
+                    <TableColumn fx:id="titleId" minWidth="183" text="Movie title">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="title" />
+                        </cellValueFactory>
+                    </TableColumn>
+                </columns>
+                <columns>
+                    <TableColumn fx:id="movieReleaseYearId" text="Release Year">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="movieReleaseYear" />
+                        </cellValueFactory>
+                    </TableColumn>
+                </columns>
+                <columns>
+                    <TableColumn fx:id="priceId" text="Movie Price">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="price" />
+                        </cellValueFactory>
+                    </TableColumn>
+                </columns>
+                <columns>
+                    <TableColumn fx:id="isInProgramId" text="Running">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="isRunningValue" />
+                        </cellValueFactory>
+                    </TableColumn>
+                </columns>
+            <VBox.margin>
+               <Insets right="10.0" top="10.0" />
+            </VBox.margin>
+            </TableView>
+        </VBox>
+    </right>
+
+    <bottom>
+        <Button onAction="#refreshData" text="Update Data">
+        <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" top="10.0" />
+        </BorderPane.margin></Button>
+    </bottom>
+
+</BorderPane>

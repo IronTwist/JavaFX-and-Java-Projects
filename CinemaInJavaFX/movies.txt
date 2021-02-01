@@ -1,0 +1,7 @@
+{"title":"Bad Boys","movieReleaseYear":1994,"price":23,"isInProgram":false,"isRunningValue":"false","id":0}
+{"title":"Bad Boys 2","movieReleaseYear":2003,"price":30,"isInProgram":true,"isRunningValue":"true","id":1}
+{"title":"The Matrix","movieReleaseYear":1999,"price":31,"isInProgram":true,"isRunningValue":"true","id":2}
+{"title":"Matrix: Reloaded","movieReleaseYear":2003,"price":25,"isInProgram":false,"isRunningValue":"false","id":3}
+{"title":"Matrix: Revolution","movieReleaseYear":2003,"price":20,"isInProgram":true,"isRunningValue":"true","id":4}
+{"title":"The Fountain","movieReleaseYear":2006,"price":28,"isInProgram":true,"isRunningValue":"true","id":5}
+{"title":"Youth without Youth","movieReleaseYear":2007,"price":25,"isInProgram":true,"isRunningValue":"true","id":8}

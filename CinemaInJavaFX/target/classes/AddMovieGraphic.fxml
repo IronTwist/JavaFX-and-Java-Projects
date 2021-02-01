@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AddMovieGraphic">
+    <VBox>
+    <GridPane layoutX="-14.0" AnchorPane.topAnchor="0.0">
+        <Label text="Title: " GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="txtMovieTitle" promptText="title" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Label text="Release year: " GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="txtReleaseYear" promptText="year" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Label text="Price: " GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextField fx:id="txtMoviePrice" promptText="price" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <Label text="Running: " GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <CheckBox fx:id="chkRunningMovie" text="True" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+        <Button fx:id="btnAddMovie" onAction="#buttonAddMovieClick" text="Add movie" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    </GridPane>
+    <TableView fx:id="movieTable" editable="true">
+        <columns>
+            <TableColumn fx:id="colIdMovie" text="Id">
+                <cellValueFactory>
+                    <PropertyValueFactory property="id" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+        <columns>
+            <TableColumn fx:id="titleId" text="Movie title">
+                <cellValueFactory>
+                    <PropertyValueFactory property="title" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+        <columns>
+            <TableColumn fx:id="movieReleaseYearId" text="Release Year">
+                <cellValueFactory>
+                    <PropertyValueFactory property="movieReleaseYear" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+        <columns>
+            <TableColumn fx:id="priceId" text="Movie Price">
+                <cellValueFactory>
+                    <PropertyValueFactory property="price" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+        <columns>
+            <TableColumn fx:id="isInProgramId" prefWidth="80.66665649414062" text="Running">
+                <cellValueFactory>
+                    <PropertyValueFactory property="isRunningValue" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+</VBox>
+</AnchorPane>

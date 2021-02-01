@@ -1,0 +1,6 @@
+{"movieId":2,"clientNumberCard":123,"dateTime":{"date":{"year":2020,"month":4,"day":9},"time":{"hour":16,"minute":52,"second":15,"nano":106000000}},"id":2}
+{"movieId":5,"clientNumberCard":123,"dateTime":{"date":{"year":2020,"month":4,"day":9},"time":{"hour":16,"minute":52,"second":22,"nano":949000000}},"id":3}
+{"movieId":5,"clientNumberCard":234,"dateTime":{"date":{"year":2020,"month":4,"day":9},"time":{"hour":16,"minute":52,"second":32,"nano":257000000}},"id":4}
+{"movieId":8,"clientNumberCard":234,"dateTime":{"date":{"year":2020,"month":4,"day":9},"time":{"hour":16,"minute":52,"second":45,"nano":267000000}},"id":7}
+{"movieId":8,"clientNumberCard":223,"dateTime":{"date":{"year":2020,"month":4,"day":10},"time":{"hour":23,"minute":0,"second":54,"nano":293000000}},"id":8}
+{"movieId":5,"clientNumberCard":247,"dateTime":{"date":{"year":2020,"month":4,"day":10},"time":{"hour":23,"minute":19,"second":32,"nano":733000000}},"id":9}

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AddReservationGraphic">
+    <VBox>
+        <GridPane layoutX="-14.0" AnchorPane.topAnchor="0.0">
+            <Label text="Movie id: " GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="txtMovieId" promptText="movie id" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+            <Label text="Client Number Card: " GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="txtClientNumberCard" promptText="client card" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+            <Button fx:id="btnAddReservation" onAction="#buttonAddReservationClick" text="Add reservation" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
+        <TableView fx:id="reservationTable" editable="true" minWidth="430.0">
+            <columns>
+                <TableColumn fx:id="colIdReservation" text="Id">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="id" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+            <columns>
+                <TableColumn fx:id="colMovieIdReservation" text="Movie id">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="movieId" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+            <columns>
+                <TableColumn fx:id="colClientNumberCard" text="Client number card">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="clientNumberCard" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+            <columns>
+                <TableColumn fx:id="colReservationDateTime" minWidth="230.0" text="Date/Time">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="DateTime" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </VBox>
+
+</AnchorPane>

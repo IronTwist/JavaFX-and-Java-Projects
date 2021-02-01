@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="318.0" prefWidth="312.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ViewMoviesByReservationGraphic">
+
+    <TableView fx:id="tblMovieByReservation" layoutX="19.0" layoutY="59.0" prefHeight="218.0" prefWidth="277.0">
+        <columns>
+            <TableColumn fx:id="colMovieTitle" minWidth="182" text="Movie Title">
+                <cellValueFactory>
+                    <PropertyValueFactory property="movieTitle" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+        <columns>
+            <TableColumn fx:id="colNumberOfReservation" prefWidth="91.33333587646484" text="Reservations">
+                <cellValueFactory>
+                    <PropertyValueFactory property="numberOfReservation" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+    <Label layoutX="57.0" layoutY="14.0" prefHeight="27.0" prefWidth="224.0" text="Movie top by reservations" textAlignment="CENTER">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </Label>
+
+</AnchorPane>

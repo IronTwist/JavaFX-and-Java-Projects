@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="95.0" prefWidth="249.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DeleteReservationGraphic">
+    <children>
+        <Button fx:id="btnDeleteReservation" layoutX="169.0" layoutY="23.0" mnemonicParsing="false" onAction="#handleDeleteReservation" text="Delete" />
+        <TextField fx:id="reservationIdToDelete" layoutX="14.0" layoutY="23.0" promptText="ID" />
+        <Label layoutX="14.0" layoutY="65.0" text="Enter id of reservation you want to delete" />
+    </children>
+
+</AnchorPane>

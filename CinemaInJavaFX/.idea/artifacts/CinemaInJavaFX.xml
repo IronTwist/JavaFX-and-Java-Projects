@@ -1,0 +1,28 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" build-on-make="true" name="CinemaInJavaFX">
+    <output-path>$PROJECT_DIR$/out/artifacts/CinemaInJavaFX</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="alias" value="" />
+        <option name="appClass" value="sample/Main" />
+        <option name="description" value="Author fratean Radu Razvan" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="icons">
+          <JavaFxApplicationIcons>
+            <option name="windowsIcon" value="$PROJECT_DIR$/resources/cameraCinema.ico" />
+          </JavaFxApplicationIcons>
+        </option>
+        <option name="keystore" value="" />
+        <option name="nativeBundle" value="all" />
+        <option name="title" value="Cinema" />
+        <option name="vendor" value="" />
+        <option name="version" value="1.0" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="CinemaInJavaFX.jar">
+        <element id="module-output" name="CinemaInJavaFX" />
+      </element>
+    </root>
+  </artifact>
+</component>

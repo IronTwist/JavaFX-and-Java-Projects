@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="96.0" prefWidth="241.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DeleteMovieGraphic">
+   <children>
+      <Button layoutX="169.0" layoutY="23.0" mnemonicParsing="false" text="Delete" fx:id="btnDeleteMovie" onAction="#handleDeleteMovie"/>
+      <TextField layoutX="14.0" layoutY="23.0" fx:id="movieIdToDelete" promptText="ID"/>
+      <Label layoutX="14.0" layoutY="65.0" text="Enter id of movie you want to delete" />
+   </children>
+</AnchorPane>
