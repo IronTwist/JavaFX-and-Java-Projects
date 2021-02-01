@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><transactions>
+    <transaction>
+        <id>1</id>
+        <client>
+            <idc>0</idc>
+            <first-name>Cosmin</first-name>
+            <last-name>Muresan</last-name>
+            <adress>Cluj</adress>
+        </client>
+        <song>
+            <ids>9999</ids>
+            <title>hit them up</title>
+            <year>1994</year>
+            <price>12.2</price>
+        </song>
+    </transaction>
+    <transaction>
+        <id>90</id>
+        <client>
+            <idc>2</idc>
+            <first-name>Marius</first-name>
+            <last-name>Oprisan</last-name>
+            <adress>str.Aviatorilor nr. 4, Dej</adress>
+        </client>
+        <song>
+            <ids>1082</ids>
+            <title>changed</title>
+            <year>2004</year>
+            <price>9.5</price>
+        </song>
+    </transaction>
+    <transaction>
+        <id>123</id>
+        <client>
+            <idc>5</idc>
+            <first-name>Liviu</first-name>
+            <last-name>Berar</last-name>
+            <adress>str.Rapsodiei nr.24, Timisoara</adress>
+        </client>
+        <song>
+            <ids>0</ids>
+            <title>My agaist the world</title>
+            <year>1989</year>
+            <price>19.5</price>
+        </song>
+    </transaction>
+    <transaction>
+        <id>2</id>
+        <client>
+            <idc>123</idc>
+            <first-name>George</first-name>
+            <last-name>Valen</last-name>
+            <adress>Cluj</adress>
+        </client>
+        <song>
+            <ids>1082</ids>
+            <title>changed</title>
+            <year>2004</year>
+            <price>9.5</price>
+        </song>
+    </transaction>
+</transactions>

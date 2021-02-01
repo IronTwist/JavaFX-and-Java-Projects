@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<songs>
+
+
+    <song>
+        <id>9999</id>
+        <title>hit them up</title>
+        <year>1994</year>
+        <price>12.2</price>
+    </song>
+
+    <song>
+        <id>345</id>
+        <title>some song</title>
+        <year>2001</year>
+        <price>2.0</price>
+    </song>
+    <song>
+        <id>1082</id>
+        <title>changed</title>
+        <year>2004</year>
+        <price>9.5</price>
+    </song>
+    <song>
+        <id>0</id>
+        <title>My agaist the world</title>
+        <year>1989</year>
+        <price>19.5</price>
+    </song>
+</songs>

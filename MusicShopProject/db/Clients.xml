@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<clients>
+
+    <client>
+        <id>2</id>
+        <first-name>Marius</first-name>
+        <last-name>Oprisan</last-name>
+        <adress>Aviatorilor</adress>
+    </client>
+    <client>
+        <id>5</id>
+        <first-name>Liviu</first-name>
+        <last-name>Berar</last-name>
+        <adress>str.Rapsodiei nr.24 Timisoara</adress>
+    </client>
+    <client>
+        <id>123</id>
+        <first-name>George</first-name>
+        <last-name>Valen</last-name>
+        <adress>Cluj</adress>
+    </client>
+    <client>
+        <id>78933</id>
+        <first-name>Alin</first-name>
+        <last-name>Hrenean</last-name>
+        <adress>Cluj</adress>
+    </client>
+</clients>
