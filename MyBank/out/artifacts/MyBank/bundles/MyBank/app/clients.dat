@@ -1,0 +1,1 @@
+{"username":"razvan","password":"123","name":"Fratean","surname":"Razvan","cnp":"18456235484","idSeries":"kx","idNumber":23,"address":{"county":"Cluj","city":"Turda","street":"Nae Ionescu","number":4,"otherInfo":"some info about me"},"dateTime":{"date":{"year":2020,"month":4,"day":15},"time":{"hour":14,"minute":35,"second":43,"nano":923000000}},"activeClient":true,"id":0}

@@ -1,0 +1,2 @@
+{"clientId":0,"timestamp":{"date":{"year":2020,"month":4,"day":15},"time":{"hour":14,"minute":39,"second":16,"nano":146000000}},"amountTransaction":2000.0,"type":"Credit","id":0}
+{"clientId":0,"timestamp":{"date":{"year":2020,"month":4,"day":15},"time":{"hour":14,"minute":39,"second":27,"nano":574000000}},"amountTransaction":1500.0,"type":"Debit","id":1}

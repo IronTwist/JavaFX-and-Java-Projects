@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="172.0" prefWidth="391.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicInterface.GenerateClientReport">
+   <children>
+      <Label layoutX="166.0" layoutY="14.0" text="Export Report as PDF">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="62.0" text="Choose a starting date:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="49.0" layoutY="94.0" text="Choose end date:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <DatePicker layoutX="163.0" layoutY="59.0" fx:id="txtStartDate" />
+      <DatePicker layoutX="163.0" layoutY="91.0" fx:id="txtEndDate"/>
+      <Button layoutX="318.0" layoutY="132.0" mnemonicParsing="false" text="Export" fx:id="btnGenerate" onAction="#handleGenerateReport" />
+   </children>
+</AnchorPane>

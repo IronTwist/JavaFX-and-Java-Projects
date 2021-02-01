@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="202.0" prefWidth="275.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicInterface.AddDepositOnTimeGraphic">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Add new term deposit ">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField layoutX="36.0" layoutY="58.0" maxWidth="200" minWidth="200" promptText="investment amount" fx:id="txtAmount"/>
+      <ChoiceBox fx:id="txtCheckBox" layoutX="35.0" layoutY="95.0" maxWidth="200" minWidth="200" value="1 luna 1.2%">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="1 luna 1.2%" />
+               <String fx:value="3 luni 2.4%" />
+               <String fx:value="6 luni 4.5%" />
+               <String fx:value="12 luni 12%" />
+            </FXCollections>
+         </items>
+      </ChoiceBox>
+      <Button fx:id="btnAddDeposit" onAction="#handleAddNewTermDeposit" layoutX="35.0" layoutY="131.0" maxWidth="200" minWidth="200" mnemonicParsing="false" prefHeight="42.0" text="Add deposit">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

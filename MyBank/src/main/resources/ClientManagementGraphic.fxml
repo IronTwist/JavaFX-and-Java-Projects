@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="740.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicInterface.ClientManagementGraphic">
+   <top>
+       <MenuBar>
+           <Menu text="File">
+               <items>
+                   <MenuItem text="Generate Report" onAction="#handleGenerateReport"/>
+                   <SeparatorMenuItem />
+               </items>
+               <items>
+                   <MenuItem text="Exit" onAction="#handleExitApp"/>
+               </items>
+           </Menu>
+<!--           <Menu text="Edit">-->
+<!--               <items>-->
+<!--                   <MenuItem text="Undo" />-->
+<!--               </items>-->
+<!--               <items>-->
+<!--                   <MenuItem text="Redo" />-->
+<!--                   <SeparatorMenuItem />-->
+<!--               </items>-->
+<!--           </Menu>-->
+       </MenuBar>
+   </top>
+    <center>
+        <AnchorPane maxWidth="982.0" prefHeight="631.0" prefWidth="988.0" style="-fx-background-color: white;">
+         <children>
+            <TableView fx:id="tableTransaction" layoutX="18.0" layoutY="234.0" prefHeight="262.0" prefWidth="388.0">
+              <columns>
+                <TableColumn minWidth="40.0" prefWidth="44.9999942779541" text="Id">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="id" />
+                    </cellValueFactory>
+                </TableColumn>
+              </columns>
+              <columns>
+                <TableColumn minWidth="84.40003204345703" prefWidth="85.40003204345703" text="Sum">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="amountTransaction" />
+                    </cellValueFactory>
+                </TableColumn>
+              </columns>
+              <columns>
+                <TableColumn minWidth="150.0" prefWidth="75.0" text="Date/Time">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="timestamp" />
+                    </cellValueFactory>
+                </TableColumn>
+              </columns>
+                <columns>
+                <TableColumn prefWidth="92.0000061035156" text="Type">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="type" />
+                    </cellValueFactory>
+                </TableColumn>
+              </columns>
+
+            </TableView>
+            <Label layoutX="115.0" layoutY="201.0" text="Transactions">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tableDeposit" layoutX="433.0" layoutY="234.0" prefHeight="262.0" prefWidth="546.0">
+              <columns>
+                <TableColumn prefWidth="48.000030517578125" text="Id">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="id" />
+                    </cellValueFactory>
+                </TableColumn>
+              </columns>
+              <columns>
+                <TableColumn prefWidth="67.20001220703125" text="Amount">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="sold" />
+                    </cellValueFactory>
+                </TableColumn>
+              </columns>
+              <columns>
+                <TableColumn minWidth="70.0" prefWidth="70.0" text="Month">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="periodMonths" />
+                    </cellValueFactory>
+                </TableColumn>
+              </columns>
+              <columns>
+                <TableColumn minWidth="79.0" prefWidth="79.0" text="Rate(%)">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="percent" />
+                    </cellValueFactory>
+                </TableColumn>
+              </columns>
+              <columns>
+                <TableColumn minWidth="111.5999755859375" prefWidth="122.199951171875" text="Int at the end">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="soldFinalDeposit" />
+                    </cellValueFactory>
+                </TableColumn>
+              </columns>
+              <columns>
+                <TableColumn minWidth="150.0" prefWidth="150.0" text="End date">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="timestamp" />
+                    </cellValueFactory>
+                </TableColumn>
+              </columns>
+            </TableView>
+             <Label layoutX="606.0" layoutY="201.0" text="On time deposits">
+                 <font>
+                     <Font size="24.0" />
+                 </font>
+             </Label>
+            <Button fx:id="btnDeposit" layoutX="632.0" layoutY="554.0" mnemonicParsing="false" onAction="#handleDeposit" prefHeight="34.0" prefWidth="156.0" style="-fx-background-radius: 10;" text="Deposit">
+               <font>
+                  <Font size="24.0" />
+               </font></Button>
+            <Label fx:id="labelSold" layoutX="738.0" layoutY="14.0" prefHeight="35.0" prefWidth="235.0" text="Sold: 0 ron">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnWithdraw" layoutX="801.0" layoutY="554.0" mnemonicParsing="false" onAction="#handleWithdraw" prefHeight="30.0" prefWidth="156.0" style="-fx-background-radius: 10;" text="Withdraw">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnAddDepositOnTime" layoutX="433.0" layoutY="507.0" mnemonicParsing="false" onAction="#handleAddDepositOnTime" prefHeight="30.0" prefWidth="100.0" style="-fx-background-radius: 20;" text="Add deposit">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnDeleteDeposit" layoutX="861.0" layoutY="507.0" mnemonicParsing="false" onAction="#handleDeleteDeposit" prefHeight="30.0" prefWidth="112.0" style="-fx-background-radius: 20;" text="Delete deposit">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnUpdate" layoutX="26.0" layoutY="554.0" mnemonicParsing="false" onAction="#refreshData" prefHeight="59.0" prefWidth="156.0" style="-fx-background-radius: 50;" text="Update Data">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="52.0" fitWidth="52.0" layoutX="14.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@bank2.png" />
+               </image></ImageView>
+            <Label fx:id="labelUserName" layoutX="83.0" layoutY="32.0" text="UserName">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <ImageView fitHeight="188.0" fitWidth="221.0" layoutX="368.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logoBank.PNG" />
+               </image>
+            </ImageView>
+         </children>
+         <padding>
+            <Insets bottom="20.0" />
+         </padding></AnchorPane>
+   </center>
+    <bottom>
+        <HBox>
+            <Label fx:id="labelUser" layoutX="36.0" layoutY="661.0" minWidth="600.0" style="-fx-text-fill: blue;" text="user">
+            <HBox.margin>
+               <Insets left="20.0" />
+            </HBox.margin>
+            <font>
+               <Font size="18.0" />
+            </font></Label>
+            <Button fx:id="txtGoToLogin" layoutX="897.0" layoutY="657.0" mnemonicParsing="false" onAction="#signOut" style="-fx-background-color: blue; -fx-text-fill: white;" text="Sign Out">
+            <HBox.margin>
+               <Insets left="280.0" />
+            </HBox.margin></Button>
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+        </HBox>
+    </bottom>
+</BorderPane>

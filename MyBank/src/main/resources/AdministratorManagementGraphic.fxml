@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="740.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicInterface.AdministratorManagementGraphic">
+    <top>
+        <MenuBar>
+            <Menu text="File">
+                <items>
+                    <MenuItem text="New" />
+                    <SeparatorMenuItem />
+                </items>
+                <items>
+                    <MenuItem text="Exit" onAction="#handleExitApp"/>
+                </items>
+            </Menu>
+            <Menu text="Edit">
+                <items>
+                    <MenuItem text="Undo" />
+                </items>
+                <items>
+                    <MenuItem text="Redo" />
+                    <SeparatorMenuItem />
+                </items>
+            </Menu>
+        </MenuBar>
+    </top>
+    <center>
+        <AnchorPane style="-fx-background-color: white;">
+            
+        <Label fx:id="labelUserName" layoutX="83.0" layoutY="32.0" text="UserName" />
+         <ImageView fitHeight="56.0" fitWidth="62.0" layoutX="14.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@bank2.png" />
+            </image></ImageView>
+         <ImageView fitHeight="207.0" fitWidth="203.0" layoutX="399.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@logoBank.PNG" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="28.0" fitWidth="220.0" layoutX="847.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@adminSection.gif" />
+            </image>
+         </ImageView>
+         <TableView fx:id="tableAllClients" layoutX="39.0" layoutY="201.0" prefHeight="200.0" prefWidth="922.0">
+           <columns>
+             <TableColumn prefWidth="37.20003128051758" text="id">
+                 <cellValueFactory>
+                     <PropertyValueFactory property="id" />
+                 </cellValueFactory>
+             </TableColumn>
+           </columns>
+           <columns>
+             <TableColumn prefWidth="70.39999389648438" text="Name">
+                 <cellValueFactory>
+                     <PropertyValueFactory property="name" />
+                 </cellValueFactory>
+             </TableColumn>
+           </columns>
+           <columns>
+               <TableColumn prefWidth="67.39999389648438" text="Surname">
+                   <cellValueFactory>
+                       <PropertyValueFactory property="surname" />
+                   </cellValueFactory>
+               </TableColumn>
+           </columns>
+           <columns>
+               <TableColumn prefWidth="79.80006408691406" text="User">
+                   <cellValueFactory>
+                       <PropertyValueFactory property="username" />
+                   </cellValueFactory>
+               </TableColumn>
+           </columns>
+           <columns>
+               <TableColumn prefWidth="89.80001831054688" text="Password">
+                   <cellValueFactory>
+                       <PropertyValueFactory property="password" />
+                   </cellValueFactory>
+               </TableColumn>
+           </columns>
+           <columns>
+               <TableColumn prefWidth="91.0" text="CNP">
+                   <cellValueFactory>
+                       <PropertyValueFactory property="cnp" />
+                   </cellValueFactory>
+               </TableColumn>
+           </columns>
+           <columns>
+               <TableColumn prefWidth="39.399993896484375" text="Series">
+                   <cellValueFactory>
+                       <PropertyValueFactory property="idSeries" />
+                   </cellValueFactory>
+               </TableColumn>
+           </columns>
+           <columns>
+               <TableColumn prefWidth="74.4000244140625" text="Number">
+                   <cellValueFactory>
+                       <PropertyValueFactory property="idNumber" />
+                   </cellValueFactory>
+               </TableColumn>
+           </columns>
+           <columns>
+               <TableColumn prefWidth="167.20001220703125" text="Adress">
+                   <cellValueFactory>
+                       <PropertyValueFactory property="address" />
+                   </cellValueFactory>
+               </TableColumn>
+           </columns>
+           <columns>
+               <TableColumn prefWidth="130.60003662109375" text="Date/Time">
+                   <cellValueFactory>
+                       <PropertyValueFactory property="dateTime" />
+                   </cellValueFactory>
+               </TableColumn>
+           </columns>
+           <columns>
+               <TableColumn prefWidth="69.0" text="Active">
+                   <cellValueFactory>
+                       <PropertyValueFactory property="activeClient" />
+                   </cellValueFactory>
+               </TableColumn>
+           </columns>
+         </TableView>
+         <Button fx:id="btnApproveAccount" layoutX="39.0" layoutY="418.0" mnemonicParsing="false" onAction="#handleApproveAccount" prefHeight="22.0" prefWidth="128.0" style="-fx-background-radius: 20;" text="Change status">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Button>
+         <Button fx:id="btnUpdateData" layoutX="39.0" layoutY="572.0" mnemonicParsing="false" onAction="#refresh" prefHeight="44.0" prefWidth="160.0" style="-fx-background-radius: 20;" text="Update Data">
+            <font>
+               <Font size="16.0" />
+            </font>
+         </Button>
+         <Button fx:id="btnDeleteAccount" layoutX="833.0" layoutY="418.0" mnemonicParsing="false" onAction="#handleDeleteAccount" prefHeight="22.0" prefWidth="128.0" style="-fx-background-radius: 20;" text="Delete account">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Button>
+         <Button fx:id="btnUpdateClient" layoutX="685.0" layoutY="418.0" mnemonicParsing="false" onAction="#handleUpdateClient" prefHeight="22.0" prefWidth="128.0" style="-fx-background-radius: 20;" text="Update account">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Button>
+        </AnchorPane>
+    </center>
+
+    <bottom>
+        <HBox>
+            <Label fx:id="labelUser" layoutX="36.0" layoutY="661.0" minWidth="600.0" style="-fx-text-fill: blue;" text="user">
+                <HBox.margin>
+                    <Insets left="20.0" />
+                </HBox.margin>
+                <font>
+                    <Font size="18.0" />
+                </font></Label>
+            <Button fx:id="txtGoToLogin" layoutX="897.0" layoutY="657.0" mnemonicParsing="false" onAction="#signOut" style="-fx-text-fill: white; -fx-background-color: blue;" text="Sign Out">
+                <HBox.margin>
+                    <Insets left="280.0" />
+                </HBox.margin></Button>
+            <padding>
+                <Insets bottom="20.0" />
+            </padding>
+        </HBox>
+    </bottom>
+</BorderPane>

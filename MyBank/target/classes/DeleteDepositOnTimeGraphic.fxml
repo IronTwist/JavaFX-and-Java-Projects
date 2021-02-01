@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="118.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicInterface.DeleteDepositOnTimeGraphic">
+   <children>
+      <Label layoutX="50.0" layoutY="23.0" text="Choose id of deposit you want to delete">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <TextField fx:id="txtIdToDelete" layoutX="88.0" layoutY="57.0" prefHeight="39.0" prefWidth="97.0" promptText=" id here">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <Button fx:id="btnDeleteDeposit" layoutX="216.0" layoutY="57.0" mnemonicParsing="false" onAction="#handleDeleteDeposit" text="Delete">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+   </children>
+    
+</AnchorPane>
